@@ -3,7 +3,6 @@
 //  Base64 Encoded HTML5 DataUrl to Native Image File PhoneGap/Cordova plugin for Android
 //
 //  Created by Shawn Van Every on 3/14/2015.
-//
 
   module.exports = {
     

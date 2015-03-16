@@ -100,26 +100,24 @@ public class DataUrlToImageFile extends CordovaPlugin {
 	
 			File imageFile = null;
 			
+			String extension = ".jpg";
+			int compressionFormat = Bitmap.CompressFormat.JPEG;
+						
 			if (format.equals("image/png")) {
-				
-				imageFile = new File(folder, data.toString() + ".png");
-				FileOutputStream out = new FileOutputStream(imageFile);
-				bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
+			
+				extension = ".png";
+				compressionFormat = Bitmap.CompressFormat.PNG;					
 				
 			} else if (format.equals("image/webp")) {
-				
-				imageFile = new File(folder, data.toString() + ".png");
-				FileOutputStream out = new FileOutputStream(imageFile);
-				bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
-				
-			} else {
-				// image/jpeg
-				
-				imageFile = new File(folder, date.toString() + ".jpg");
-				FileOutputStream out = new FileOutputStream(imageFile);
-				bmp.compress(Bitmap.CompressFormat.JPEG, 100, out);
-				
+			
+				extension = ".webp";
+				compressionFormat = Bitmap.CompressFormat.WEBP;
+								
 			}
+
+			imageFile = new File(folder, date.toString() + extension);
+			FileOutputStream out = new FileOutputStream(imageFile);
+			bmp.compress(compressionFormat, 100, out);
 
 			out.flush();
 			out.close();
