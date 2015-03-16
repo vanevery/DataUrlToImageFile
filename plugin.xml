@@ -1,0 +1,40 @@
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.mobvcasting.DataUrlToImageFile"
+    version="0.0.1">
+
+    <name>DataUrl to Image File</name>
+
+    <engines>
+        <engine name="cordova" version=">=4.0.0" />
+    </engines>
+
+    <description>Allows you to save an HTML5 DataURL (from a Canvas tag or otherwise) to the Android file system from your app.</description>
+    <author>Shawn Van Every - shawn@mobvcasting.com</author>
+    <keywords>dataurl, canvas, image, photo, library</keywords>
+
+    <license>null</license>
+
+    <js-module src="www/DataUrlToImageFile.js" name="DataUrlToImageFile">
+        <clobbers target="window.dataUrlToImageFile" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="DataUrl2ImagePlugin" >
+            <param name="android-package" value="com.mobvcasting.DataUrlToImageFile"/>
+          </feature>
+        </config-file>
+
+        <source-file src="src/android/DataUrlToImageFile.java" 
+            target-dir="src/com/mobvcasting/DataUrlToImageFile" />
+
+    </platform>
+
+</plugin>
