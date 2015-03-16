@@ -6,7 +6,7 @@
     <name>DataUrl to Image File</name>
 
     <engines>
-        <engine name="cordova" version=">=4.0.0" />
+        <engine name="cordova" version=">=3.0.0" />
     </engines>
 
     <description>Allows you to save an HTML5 DataURL (from a Canvas tag or otherwise) to the Android file system from your app.</description>
