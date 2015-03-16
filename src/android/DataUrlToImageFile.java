@@ -101,7 +101,7 @@ public class DataUrlToImageFile extends CordovaPlugin {
 			File imageFile = null;
 			
 			String extension = ".jpg";
-			int compressionFormat = Bitmap.CompressFormat.JPEG;
+			Bitmap.CompressFormat compressionFormat = Bitmap.CompressFormat.JPEG;
 						
 			if (format.equals("image/png")) {
 			
