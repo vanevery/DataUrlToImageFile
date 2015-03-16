@@ -10,13 +10,13 @@ Installation
 
 ### For Cordova 4.0.x:
 
-1. To add this plugin just type: `cordova plugin add https://github.com/vanevery/DataUrl2ImagePlugin.git` or `phonegap local plugin add https://github.com/vanevery/DataUrl2ImagePlugin.git`
-2. To remove this plugin type: `cordova plugin remove com.mobvcasting.DataUrl2ImagePlugin` or `phonegap local plugin remove com.mobvcasting.DataUrl2ImagePlugin`
+1. To add this plugin just type: `cordova plugin add https://github.com/vanevery/DataUrlToImageFile.git` or `phonegap local plugin add https://github.com/vanevery/DataUrlToImageFile.git`
+2. To remove this plugin type: `cordova plugin remove com.mobvcasting.DataUrlToImageFile` or `phonegap local plugin remove com.mobvcasting.DataUrlToImageFile`
 
 Usage:
 ------
 
-Call the `window.dataUrl2ImagePlugin.saveImageDataURLtoFileSystem(dataurl, success, error)` :
+Call the `window.dataUrlToImageFile.saveImageData(dataurl, options, success, error)` :
 
 ### Example
 ```html
